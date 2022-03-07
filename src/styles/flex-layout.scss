@@ -1,0 +1,154 @@
+/* **--layout-flex 布局 ----------------*/
+/*
+flex-direction: 定义主轴方向      
+    row（默认) 水平方向，起点在左;      row-reverse 水平方向，起点右;
+    column 垂直方向，起点在上;   column-reverse 垂直方向，起点在下;
+
+justify-content: 子项在主轴对齐方式
+    flex-start: 左对齐;    flex-end: 右对齐;  center: 居中对齐; 
+    space-between: 两端对齐;    space-around: 子项两侧间隔相等;
+
+align-items: 子项在交叉轴对齐方式
+    flex-start：起点对齐;    flex-end：终点对齐;  center：交叉轴的中点对齐;
+    baseline: 项目的第一行文字的基线对齐;
+    stretch（默认值：如果项目未设置高度或设为auto,将占满整个容器的高度;
+
+flex-wrap: 项目换行方式
+    nowrap: 不换行;    wrap: 换行,第一行在上方;    wrap-reverse：换行,第一行在下方;
+
+*/
+/*---水平居中---*/
+.flex-x-center {
+  display: flex;
+  justify-content: center;
+}
+/*--垂直居中---*/
+.flex-y-center {
+  display: flex;
+  align-items: center;
+}
+/*--水平垂直居中---*/
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*--水平居中-垂直起点对齐---*/
+.flex-center-start {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/*--水平方向两端对齐---*/
+.flex-x-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*--水平方向 项目两侧间隔相等---*/
+.flex-x-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*--主轴水平方向-起点在右端-交叉轴居中--*/
+.flex-x-reverse-center {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+/*--水平方向两端对齐-交叉轴起点对齐--*/
+.flex-between-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+/*--水平方向两端对齐-交叉轴终点对齐--*/
+.flex-between-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+/*--垂直方向两端对齐-交叉轴居中对齐--*/
+.flex-y-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+/*--水平方向左对齐-垂直方向居中--*/
+.flex-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/*-- 水平方向左对齐-垂直方向顶部对齐 --*/
+.flex-left-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+/*--水平方向左对齐-垂直方向终点对齐--*/
+.flex-left-end {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+/*---水平方向左对齐-垂直方向居中-子项自动换行--*/
+.flex-left-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+/*---水平方向左对齐-垂直方向顶部对齐-子项自动换行--*/
+.flex-left-top-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/*--水平方向右对齐-垂直方向居中--*/
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/*--水平方向右对齐-垂直顶部对齐--*/
+.flex-right-top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/*--主轴垂直方向-主轴居中-交叉轴居中--*/
+.flex-y-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*--主轴垂直方向-主轴起点对齐-交叉轴居中--*/
+.flex-y-satrt-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+/*--主轴垂直方向-主轴起点对齐-交叉轴起点对齐--*/
+.flex-y-satrt-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+/*--主轴垂直方向-主轴终点对齐-交叉轴居中--*/
+.flex-y-end-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}

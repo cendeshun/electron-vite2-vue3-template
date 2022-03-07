@@ -1,0 +1,10 @@
+/*
+ * @Description: Scss minx/fun等
+ */
+
+/*--- 混合宏 ---*/
+@mixin font($s: $font-a, $c: #000, $al: left) {
+  font-size: $s;
+  color: $c;
+  text-align: $al;
+}

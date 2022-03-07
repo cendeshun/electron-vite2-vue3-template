@@ -1,0 +1,61 @@
+{
+  "name": "electron-vue3-app",
+  "private": true,
+  "version": "1.0.0",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite --mode development",
+    "vite:build": "vite --mode production build",
+    "vite:preview": "vite preview --host 0.0.0.0",
+    "clear": "node ./config/clear.js ",
+    "prettier": "prettier --write .",
+    "electron": "wait-on tcp:3000 && cross-env NODE_ENV=development electronmon .",
+    "start": "concurrently -k \"npm run dev\" \"npm run electron\"",
+    "build": "npm run clear && npm run vite:build && cross-env NODE_ENV=production electron-builder"
+  },
+  "build": {
+    "appId": "com.cendeshun.host",
+    "productName": "electron-vue3-app",
+    "copyright": "Copyright © 2022-2025 V2X",
+    "directories": {
+      "output": "./build/app",
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis"
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true
+    }
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^6.0.1",
+    "@element-plus/icons-vue": "^1.0.0",
+    "axios": "^0.26.0",
+    "element-plus": "^2.0.3",
+    "pinia": "^2.0.11",
+    "pinia-plugin-persist": "0.0.93",
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.2.2",
+    "concurrently": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "electron": "^17.1.0",
+    "electron-builder": "^22.14.13",
+    "electronmon": "^2.0.2",
+    "prettier": "^2.5.1",
+    "sass": "^1.49.9",
+    "vite": "^2.8.4",
+    "vite-plugin-electron-renderer": "^0.1.4",
+    "wait-on": "^6.0.1"
+  }
+}
